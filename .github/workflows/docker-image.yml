@@ -43,10 +43,10 @@ jobs:
 
       - name: Tag Docker images
         run: |
-          docker tag cb-service-01:latest $DOCKERHUB_USERNAME/cb-service-01:${{ env.commit_hash }}
-          docker tag cb-service-02:latest $DOCKERHUB_USERNAME/cb-service-02:${{ env.commit_hash }}
+          docker tag ga-service-01:latest $DOCKERHUB_USERNAME/ga-service-01:${{ env.commit_hash }}
+          docker tag ga-service-02:latest $DOCKERHUB_USERNAME/ga-service-02:${{ env.commit_hash }}
 
       - name: Push Docker images
         run: |
-          docker push $DOCKERHUB_USERNAME/cb-service-01:${{ env.commit_hash }}
-          docker push $DOCKERHUB_USERNAME/cb-service-02:${{ env.commit_hash }}
+          docker push $DOCKERHUB_USERNAME/ga-service-01:${{ env.commit_hash }}
+          docker push $DOCKERHUB_USERNAME/ga-service-02:${{ env.commit_hash }}
