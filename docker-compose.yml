@@ -2,9 +2,9 @@ version: '3.8'
 services:
   cb-service-01:
     build:
-      context: ./cb-service-01
+      context: ./ga-service-01
       dockerfile: Dockerfile
-    image: cb-service-01:latest
+    image: ga-service-01:latest
     ports:
       - "5000:5000"
     
@@ -12,6 +12,6 @@ services:
     build:
       context: ./cb-service-02
       dockerfile: Dockerfile
-    image: cb-service-02:latest
+    image: ga-service-02:latest
     ports:
       - "5001:5000"
