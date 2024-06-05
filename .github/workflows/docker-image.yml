@@ -18,10 +18,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
@@ -36,7 +36,7 @@ jobs:
 
       - name: Get commit hash
         id: vars
-        run: echo "::set-output name=commit_hash::$(echo $GITHUB_SHA | cut -c 1-7)"
+        run: echo "commit_hash=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
 
       - name: Build Docker images
         run: docker-compose build
