@@ -48,5 +48,5 @@ jobs:
 
       - name: Push Docker images
         run: |
-          docker push $DOCKERHUB_USERNAME/ga-service-01:${{ steps.vars.outputs.commit_hash }}
-          docker push $DOCKERHUB_USERNAME/ga-service-02:${{ steps.vars.outputs.commit_hash }}
+          docker push $DOCKERHUB_USERNAME/cb-service-01:${{ env.commit_hash }}
+          docker push $DOCKERHUB_USERNAME/cb-service-02:${{ env.commit_hash }}
