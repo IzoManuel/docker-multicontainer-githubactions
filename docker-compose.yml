@@ -10,7 +10,7 @@ services:
     
   cb-service-02:
     build:
-      context: ./cb-service-02
+      context: ./ga-service-02
       dockerfile: Dockerfile
     image: ga-service-02:latest
     ports:
